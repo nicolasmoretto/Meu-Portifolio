@@ -303,7 +303,7 @@ transform: rotate(0);
   
   .card-wrapper::before{
     content: '';
-    position: absolute;
+    position:absolute;
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -364,11 +364,19 @@ transform: rotate(0);
     padding-top: 3%;
     padding-bottom: 0;
   }
-  .a{
+  .contact{
     padding-right: 20%;
   }
 
-  .b{
+  .contact a{
+    text-decoration: none;
+    color: blue;
+    transition: none;
+    display: inline;
+    background-color: #d0d0d5;
+  }
+
+  .image{
     width: 180px;
     height: 180px;
     border-radius: 100%;
@@ -384,7 +392,7 @@ transform: rotate(0);
     
   }
 
-  .c{
+  .final{
     padding-left: 10%;
     padding-right: 2%;
   }
