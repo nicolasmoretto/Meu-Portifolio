@@ -376,6 +376,10 @@ transform: rotate(0);
     padding-right: 20%;
   }
 
+  .a a{
+    color: #000000;
+    background-color: #d0d0d5;
+  }
   .b{
     width: 180px;
     height: 180px;
@@ -396,3 +400,9 @@ transform: rotate(0);
     padding-left: 10%;
     padding-right: 2%;
   }
+
+  .c a{
+    color: #000000;
+    background-color: #d0d0d5;
+  } 
+  
