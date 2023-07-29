@@ -50,7 +50,7 @@ align-items: center;
 width: 100%;
 padding-top: 0px;
 }
-  .img{
+  .imgabout{
     display: inline-block;
     width: 350px;
     height: 400px;
@@ -89,6 +89,20 @@ padding-top: 0px;
 .about a:hover{
   color: blue;
   background-color: #000000;
+}
+.habilits{
+ padding-top:15%;
+ padding-bottom: 15%;
+ align-items: center;
+}
+.languages{
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 1px;
+  display: inline-block;
+}
+.imglanguages{
+  padding: 10px;
 }
 
 .line{
