@@ -1,17 +1,33 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
+
+:root{
+  --white:#ffffff;
+  --black:#000000;
+  --green:#00FF00;
+  --prewhite:#ffffffe7;
+}
+
+.dark-mode{
+  transition: .5s ease-in-out;
+  --white:#000000;
+  --black:#ffffff;
+  --green:red;
+  --prewhite:#353535e7;
+}
 body{
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  color:white;
-  background-color: #000000;
+  color:var(--white);
+  background-color: var(--black);
 }
 /*Header*/
 .header-container{
   height: 100vh;
   width: 95vw;
-  background-color: black;
+  background-color: var(--black);
   background-image: url("../HTML/portifolio/APAGAR\ FOTO\ MINHA.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -24,26 +40,46 @@ body{
   padding: 50px;
   position:relative;
 }
+.toggle-btn{
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--green);
+  display: inline-block;
+  align-items: center;
+  padding: 1rem 4rem;
+  border: 2px solid var(--green);
+  min-width: 4rem;
+  cursor: pointer;
+  margin-right: 15%;
+}
+.toggle-btn:hover{
+  background-color: var(--prewhite);
+  transition: .5s ease-in-out;
+  
+  }
 
 h1{
   font-size: 50px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  color: var(--white);
 }
 
 h2{
   text-transform: uppercase;
   letter-spacing: 4px;
+  color: var(--white);
 }
 
 h3{
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: var(--white);
 }
   .myself{
 
 display: inline-block;
-background-color:rgb(0, 0, 0);
+background-color:var(--black);
 display: flex;
 justify-content: space-evenly;
 align-items: center;
@@ -58,7 +94,7 @@ padding-top: 0px;
     margin: 1rem 0 0 0;
     align-items: center;
     justify-content: center;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black);
     background-image: url("https://nicolasmoretto.github.io/Meu-Portifolio/portfoliofoto.jpg ");
     background-position: center;
     background-size: cover;
@@ -69,7 +105,7 @@ padding-top: 0px;
 
 
 .about{
-  background-color: rgb(0, 0, 0);
+  background-color: var(--black);
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -82,13 +118,13 @@ padding-top: 0px;
 
 .about a{
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white);
   transition: none;
   display: inline;
 }
 .about a:hover{
   color: blue;
-  background-color: #000000;
+  background-color: var(--black);
 }
 .habilits{
  padding-top:15%;
@@ -100,7 +136,7 @@ padding-top: 0px;
   text-transform: uppercase;
   padding: 1px;
   display: inline-block;
-  background-color:rgb(0, 0, 0);
+  background-color:var(--black);
 justify-content: space-evenly;
 align-items: center;
 width: 100%;
@@ -110,13 +146,13 @@ width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30vh;
-  width: 80vh;
+  height: 100px;
+  width: 300px;
 }
 
 .line{
   display: inline-block;
-background-color:rgb(0, 0, 0);
+background-color:var(--black);
 display: flex;
 justify-content: space-evenly;
 align-items: center;
@@ -137,18 +173,27 @@ width: 100%;
     letter-spacing: 4px;
     text-transform: uppercase;
     width: 60%;
+    margin-bottom: 0px;
+  }
+  .teste{
+    background-color:var(--black);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
   }
 
 .social-media{
   display: flex;
-  margin-left: 5%;
+  margin-right: 30%;
+
   }
 
 .social-media a {
   text-decoration:none;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   padding: 1rem 4rem;
-  border: 2px solid #00FF00;
+  border: 2px solid var(--green);
   min-width: 4rem;
   display: flex;
   align-items: center;
@@ -156,7 +201,7 @@ width: 100%;
   transition: .5s ease-in-out;
 }
 a:hover{
-background-color: #ffffffe7;
+background-color: var(--prewhite);
 }
 
 /*MENU HAMBURGUER*/
@@ -183,7 +228,7 @@ background-color: #ffffffe7;
 .checkbox .trace{
   width: 50px;
   height: 2px;
-  background-color: #00FF00;
+  background-color: var(--green);
   position: absolute;
   border-radius: 4px;
   transition: 0.5s ease-in-out;
@@ -217,7 +262,7 @@ transform: rotate(0);
   height: 4px;
   width: 10px;
   border-radius: 50%;
-  box-shadow: 0px 0px 0px 0px #ffffff;
+  box-shadow: 0px 0px 0px 0px var(--white);
   z-index: -1;
   transition: 400ms ease-in-out 0s;
 }
@@ -243,7 +288,7 @@ transform: rotate(0);
 
 .menu-itens ul li a{/*LETRAS DA HOME*/
   margin: 10px 0;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -267,11 +312,11 @@ transform: rotate(0);
   top: 70px;
 }
 #toggle:checked + .checkbox{ /*QUADRADO DOS 3 RISCOS*/
-  background-color: #000000;
+  background-color: var(--black);
 }
 
 #toggle:checked ~ .menu{
-  box-shadow: 0px 0px 0px 100vmax #000000; /*COR DO MENU COM 3 COISAS*/
+  box-shadow: 0px 0px 0px 100vmax var(--black); /*COR DO MENU COM 3 COISAS*/
   z-index: 1;
 }
 
@@ -282,14 +327,14 @@ transform: rotate(0);
   /*CARDS*/
 
   .container{     /*LETRAS DO MENU PROJETOS*/
-    color: #ffffff;
+    color: var(--white);
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 3rem 0;
-    background-color: rgb(0, 0, 0); /*FUNDO DO MENU CARDS*/
+    background-color: var(--black); /*FUNDO DO MENU CARDS*/
     padding-top: 5vh;
     padding-bottom: 0%;
   }
@@ -320,13 +365,13 @@ transform: rotate(0);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black);
     background-image: url("APAGAR\ FOTO\ MINHA.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: grayscale(0.5);
-    color: rgb(255, 255, 255); /*LETRAS DENTRO DA FOTO DO PROJETO*/
+    color: var(--white); /*LETRAS DENTRO DA FOTO DO PROJETO*/
     cursor: pointer;
     transition: 0.5s ease-in-out;
   }
@@ -347,10 +392,10 @@ transform: rotate(0);
 
   .card-wrapper a{
     text-decoration: none;
-  color: #ffffff;
+  color: var(--white);
   transition: none;
   display: inline;
-  background-color: #000000;
+  background-color: var(--black);
   }
 
   /*
@@ -402,17 +447,17 @@ transform: rotate(0);
 
   .footer{
     width: 100%;
-    background-color: #d0d0d5;
+    background-color:var(--prewhite);
     display: flex;
-    color: #000000;
+    color: var(--black);
   }
   
   .informations{
     width: 100%;
     height: 200px;
-    background-color: #d0d0d5;
+    background-color: var(--prewhite);
     display: flex;
-    color: #000000;
+    color: var(--black);
     padding-left: 3%;
     padding-top: 3%;
     padding-bottom: 0;
@@ -422,8 +467,8 @@ transform: rotate(0);
   }
 
   .a a{
-    color: #000000;
-    background-color: #d0d0d5;
+    color: var(--black);
+    background-color: var(--prewhite);
   }
   .b{
     width: 180px;
@@ -432,7 +477,7 @@ transform: rotate(0);
    
     align-items: center;
     justify-content: center;
-    background-color: rgb(0, 0, 0);
+    background-color:var(--black);
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Flinha-geom%25C3%25A9trica-simples-vetor-do-nan%25C3%25B4metro-da-letra-abstrata-logotipo-conceito-de-projeto-luxuoso-elegante-incomum-original-149232884.jpg&f=1&nofb=1&ipt=3a2bb29aebc011c2abaccde7bb4afd0292f113729540ae805244aa9b0e5d8fdc&ipo=images");
     background-position: center;
     background-size: cover;
@@ -447,7 +492,6 @@ transform: rotate(0);
   }
 
   .c a{
-    color: #000000;
-    background-color: #d0d0d5;
+    color: var(--black);
   } 
   
