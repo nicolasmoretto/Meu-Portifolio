@@ -38,12 +38,17 @@
           <h1>Nicolas W. S. Moretto</h1>
         </div>
         <div class="start">
-          <h3>  Sou um estudante de Ciência da Computação em busca do front-end :)</h3>
+          <h3>  Sou um estudante de Ciência da Computação em busca do front-end :)
+            FALTA , ALINHAR O DARKMODE, COLOCAR O TEXTO DIGITADO E AJUSTAR O MENU HABILIDADES PARA MOBILE
+          </h3>
         </div> 
       </div>
+      <div class="teste">
       <div class="social-media">
         <a href="https://www.linkedin.com/in/nicolas-moretto-geral/">Linkedin</a><a href="https://github.com/nicolasmoretto">GitHub</a>
       </div>
+      <div class="toggle-btn" id="btn">Dark Mode</div>
+    </div>
     </header>
     <div class="myself">
       <div class="about">
@@ -119,5 +124,12 @@
         </div>
       </div>
     </footer>
+    <script>
+          let btn = document.getElementById('btn')
+    btn.onclick = function () {
+      document.body.classList.toggle('dark-mode')
+    }
+    </script>
+  </div>
   </body>
 </html>
