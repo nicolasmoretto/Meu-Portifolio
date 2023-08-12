@@ -7,7 +7,7 @@
     <link rel="icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Flinha-geom%25C3%25A9trica-simples-vetor-do-nan%25C3%25B4metro-da-letra-abstrata-logotipo-conceito-de-projeto-luxuoso-elegante-incomum-original-149232884.jpg&f=1&nofb=1&ipt=3a2bb29aebc011c2abaccde7bb4afd0292f113729540ae805244aa9b0e5d8fdc&ipo=images">
     <title>Portifólio | Nicolas Moretto</title>
   </head>
-    <body>
+  <body>
     <header class="header-container">
       <div class="header"></div>
       <div class="checkbox-container"></div>
@@ -37,9 +37,19 @@
           <h1>Nicolas W. S. Moretto</h1>
         </div>
         <div class="start">
-          <h3>  Sou um estudante de Ciência da Computação em busca do front-end :)
-          </h3>
+           Sou um estudante de Ciência da Computação em busca do front-end :)
         </div> 
+        <script>
+          function typeWriter(elemento){
+            const textoArray= elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra,i) =>{
+          setTimeout(() => elemento.innerHTML += letra,50 *i)
+            });
+        }
+        const titulo = document.querySelector('.start');
+        typeWriter (titulo);
+        </script>
       </div>
       <div class="teste">
       <div class="social-media">
@@ -131,3 +141,4 @@
   </div>
   </body>
 </html>
+
